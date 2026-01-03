@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple Mall</title>
+    <link rel="stylesheet" href="shop.css" />
+</head>
+<body>c
+    <header>
+        <h1>Simple Mall</h1>
+        <nav style="margin-left:auto">
+            <button class="link" id="nav-home">Home</button>
+            <button class="link" id="nav-mall">Mall</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- HOME -->
+        <section id="page-home" class="center">
+            <img src="https://thumbs.dreamstime.com/b/mall-exterior-26187559.jpg" alt="Mall" class="mall-photo" id="home-mall-photo" onerror="this.style.display='none'"><br><br>
+            <div style="text-align:center">
+                <button class="btn" id="open-mall">Open Mall</button>
+            </div>
+            <p style="color:var(--muted);margin-top:8px;font-size:14px"></p>
+        </section>
+
+        <!-- MALL PAGE -->
+        <section id="page-mall" class="hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <h2 style="margin:0">Mall</h2>
+                <button class="secondary" id="back-home">Home</button>
+            </div>
+
+            <div class="grid" id="product-grid">
+                <!-- product cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- PRODUCT DETAILS -->
+        <section id="page-product" class="hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+                <h2 id="prod-title" style="margin:0">Product</h2>
+                <div>
+                    <button class="secondary" id="back-mall">Back to Mall</button>
+                    <button class="secondary" id="back-home-2">Home</button>
+                </div>
+            </div>
+
+            <div class="details">
+                <img id="prod-img" src="" alt="Product image" onerror="this.style.objectFit='contain';this.style.background='#fff'">
+                <div class="meta">
+                    <div class="label">Product</div>
+                    <h3 id="prod-name" style="margin:6px 0 0 0"></h3>
+                    <div class="label">Price</div>
+                    <div class="big-price"><span id="prod-price"></span><span id="prod-discount" class="discount"></span></div>
+                    <div class="rating" id="prod-rating"></div>
+                    <div style="margin-top:12px;color:var(--muted)" id="prod-desc"></div>
+
+                    <div class="buy-wrap">
+                        <button class="btn" id="buy-now">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
